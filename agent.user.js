@@ -21,7 +21,7 @@ function wrapper(plugin_info) {
         //for every class "nickname" in whole document, prevent other js from running   $(document).on('click', '.nickname', function(event)
         $(document).on('click', '.nickname', function (event) {
             //show alert to ask if user wants to open agent profile
-            if (confirm("Open agent profile?\n\n(Called by Agent Opener plugin)")) {
+            if (confirm("Open " + $(this).text() + "'s profile?\n\n(Called by Agent Opener plugin)")) {
                 //get agent name from the class "nickname"
                 var agentName = $(this).text();
                 //open agent profile in game https://link.ingress.com/?link=https://intel.ingress.com/agent/nickname
